@@ -237,5 +237,6 @@ function darkmode() {
   }
   let arr = document.getElementsByTagName("h5");
   arr[0].classList.toggle("light-text");
+  document.getElementById("day").classList.toggle("light-text");
 }
-document.getElementById("day").classList.toggle("light-text");
+
