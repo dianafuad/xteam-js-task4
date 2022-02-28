@@ -122,9 +122,15 @@ function calScore() {
  */
 
 function fillDepartmentstMenu() {
+  
   let choice = document.getElementById("faculty-select").value;
   let departments_Arr = getFaculityDep(choice);
   let depList = document.getElementById("deprtments-select");
+ 
+  // delete the previous selection
+  while (depList.hasChildNodes()) {
+    depList.removeChild(depList.firstChild);
+  }
 
   depList.style.visibility = "visible";
   depList.style.opacity = "1";
@@ -133,7 +139,10 @@ function fillDepartmentstMenu() {
     var option = document.createElement("option");
     option.appendChild(document.createTextNode(department));
     depList.appendChild(option);
+    
   }
+  
+
 }
 
 
