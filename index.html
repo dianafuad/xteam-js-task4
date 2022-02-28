@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="checkAge()">
+    <section class="landing">
+     <div class="left-image">
+         <img src="img/pens.png" alt="">
+     </div>
+
+     
+       <!-- <div class="overlay"></div> -->
+        <nav>
+            <div class="logo">
+                Web<span class="logo-color"> Uni</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <button>Login</button>
+        </nav>
+      <div class="content">
+        <div class="text">
+            <h1>Get The Best Online Courses</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum pariatur quos eum et quibusdam odit aliquam similique alias magni enim.</p>
+        </div>
+        <form action="courses.html">
+            <input type="date" class="form-control  " name="birthday" id="birthday" max="2012-01-01" min="1942-01-01" oninput="calAge()">
+            <input type="text" name="gpa" id="gpa" min="1" placeholder="Enter your GPA">
+          
+            <button onclick="calScore()" id="show-gpa">
+               
+                Procces to Website</button>
+        </form>
+      </div>
+
+    </section>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrab -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+    <nav class="position-fixed w-100" id="nav">
+        <div class="logo">
+            Web<span class="logo-color">Uni</span>
+        </div>
+        <ul class="d-none d-md-flex">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        <!-- <button class="d-none d-md-block">Login</button> -->
+          <label class="switch">
+            <input type="checkbox" onclick="darkmode()"> 
+            <span class="slider round"></span>
+          </label>
+    </nav>
+    <section class="choose-department">
+     
+        <div class="content row align-items-center">
+            <div class="left mt-5 pt-5 col-md-6 col-12">
+                <h2> Welcom to Web<span class="logo-color">Uni</span> universaty</h2>
+
+                <p> Select your faculty and depatment to countiue <i class="fa-solid fa-arrow-down-long pl-3"></i> </p>
+
+                <select class=" custom-select custom-select-sm " id="faculty-select" oninput="fillDepartmentstMenu()">
+                    <option selected hidden id="eng">Select your Faculity</option>
+                    <option id="eng">Faculty of Engineering</option>
+                    <option id="fci">Faculty of Computer and Information</option>
+                    <option id="med">Faculty of Medicine</option>
+
+                </select>
+
+                <select class="custom-select custom-select-sm my-5" id="deprtments-select">
+                </select>
+
+
+
+
+            </div>
+            <div class="right col-md-6  d-none d-md-block text-md-right mt-5 ">
+                <img src="img/select-fac.png" alt="">
+            </div>
+        </div>
+   
+    </section>
+    <div class="container ">
+        <section class="appoinment  justify-content-md-between justify-content-center align-items-center row ">
+            <div class="left col-11 col-md-6 mb-5">
+                <img src="img/appoinment.svg" alt="">
+            </div>
+            <div class="right col-11 col-md-6">
+
+                <h2> Schadule an Appoinment </h2>
+                <h5>select a date in next to months:</h5>
+                <div class="choose-app-date row ml-1 mt-4">
+                    <input type="number" class="form-control col-4 mr-4 " name="appinment-date" id="appoinment-date"
+                        min="1" max="62" oninput="" placeholder="Date 1-31">
+                    <input type="number" class="form-control col-4 mr-4  " name="appinment-month" id="appoinment-month"
+                        min="1" max="12" oninput="" placeholder="Month 1-12">
+                    <button onclick="pickAppoinment()"> OK</button>
+                </div>
+                <p class="mt-4" id="day"></p>
+            </div>
+        </section>
+    </div>
+   <div class="container">
+    <h2 class="mb-4"> Select class or more to delete :</h2>
+       <section class="courses d-flex align-items-center justify-content-around flex-wrap">
+       
+        <div class="course" id="c1">
+               <button class="mr-4">
+               <input type="checkbox" id="ch1">
+               </button>
+               <span>Data science</span>
+               <div class="image pt-4">
+                   <img src="img/data_processing.svg" alt="">
+               </div>
+           </div>
+           <div class="course" id="c2">
+            <button class="mr-4">
+             <input type="checkbox" id="ch2">
+            </button>
+            <span> Testing</span>
+            <div class="image pt-4">
+                <img src="img/testing.svg" alt="">
+            </div>
+        </div>
+        <div class="course" id="c3">
+            <button class="mr-4">
+             <input type="checkbox" id="ch3">
+            </button>
+            <span> Circuits</span>
+            <div class="image pt-4">
+                <img src="img/circuits.svg" alt="">
+            </div>
+        </div>
+        
+        <div class="course" id="c4">
+            <button class="mr-4">
+             <input type="checkbox" id="ch4">
+            </button>
+            <span> Full Stack</span>
+            <div class="image pt-4">
+                <img src="img/fullstack.svg" alt="">
+            </div>
+        </div>
+        
+        <div class="course" id="c5">
+            <button class="mr-4">
+             <input type="checkbox" id="ch5">
+            </button>
+            <span> artificial intelligence</span>
+            <div class="image pt-4">
+                <img src="img/Artifitial .svg" alt="">
+            </div>
+        </div>
+        
+        <div class="course" id="c6">
+            <button class="mr-4">
+             <input type="checkbox" id="ch6">
+            </button>
+            <span> UI Design</span>
+            <div class="image pt-4">
+                <img src="img/UI.svg" alt="">
+            </div>
+        </div>
+       
+        <div class="course" id="c7">
+            <button class="mr-4">
+             <input type="checkbox" id="ch7">
+            </button>
+            <span>Security</span>
+            <div class="image pt-4">
+                <img src="img/sequrity.svg" alt="">
+            </div>
+        </div>
+       
+        <div class="course" id="c8">
+            <button class="mr-4">
+             <input type="checkbox" id="ch8">
+            </button>
+            <span>Cloud Computing</span>
+            <div class="image pt-4">
+                <img src="img/clouds.svg" alt="">
+            </div>
+        </div>
+       
+       </section>
+       <button class="hide" onclick="hideSelected(this)"> show /Hide Selected</button>
+      <!-- <button class="show" onclick="showSelected(this)"> Show Selected</button> -->
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+</script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
